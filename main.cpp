@@ -2,15 +2,17 @@
 
 using namespace std;
 
-double my_pow(double result, unsigned int numpow) {
+double my_pow(double result, int numpow) {
 	double temp = result;
-	for (int i = 1; i < numpow; i++) result *= temp;
+	if (numpow > 0) for (int i = 1; i < numpow; i++) result *= temp;
+	else if (numpow < 0) for (int i = 1; i < numpow; i++) result /= temp;
+	else result = 1;
 	return result;
 }
 
 int main() {
 	double number;
-	unsigned int deg;
+	int deg;
 	cout << "Enter a number and a degree" << endl;
 	cin >> number;
 	cin >> deg;
