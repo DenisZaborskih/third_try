@@ -2,13 +2,9 @@
 
 using namespace std;
 
-double my_pow(double result, int numpow) {
-	double temp = result;
-	if (numpow > 0) for (int i = 1; i < numpow; i++) result *= temp;
-	else if (numpow < 0) for (int i = 1; i < numpow; i++) result /= temp;
-	else result = 1;
-	return result;
-}
+double my_pow(double result, unsigned int numpow) {
+	return pow(result, numpow);
+
 
 int main() {
 	double number;
